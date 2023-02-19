@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         padding: '0em 0em 0.5em 0em'
     },
     productTitle: {
-        height: '150px'
+        height: '160px'
     },
     card: {
         height: '100%',
@@ -29,13 +29,23 @@ const useStyles = makeStyles((theme: Theme) => ({
         flexDirection: 'column'
     },
     cardActions: {
-        justifyContent: 'center',
+        justifyContent: 'center'
+    },
+    justifyContentEnd: {
+        justifyContent: 'end'
     },
     cardMedia: {
-        paddingTop: '1em', // 16:9
+        paddingTop: '1em'
     },
     cardContent: {
-        flexGrow: 1,
+        flexGrow: 1
+    },
+    filterButtonsDiv: {
+        display: 'flex',
+        justifyContent: 'end'
+    },
+    filterButton: {
+        margin: '5px'
     }
 }));
 

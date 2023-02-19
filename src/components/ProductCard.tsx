@@ -33,9 +33,9 @@ function ProductCard({ product, isFavorite, onFavoriteClick }: ProductCardProps)
                         <Typography gutterBottom variant="h5" component="h2" className={classes.productTitle}>
                             {product.title}
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p" className={classes.productDescription}>
+                        {/* <Typography variant="body2" color="textSecondary" component="p" className={classes.productDescription}>
                             {product.description}
-                        </Typography>
+                        </Typography> */}
                         <Typography variant="h6" component="p">
                             ${product.price}
                         </Typography>
