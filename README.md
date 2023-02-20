@@ -1,7 +1,10 @@
-# Getting Started with Fake Store App
+# Fake Store App
+
+Fake Store app is a web application for a product catalog, that uses the [Fake Store Api](https://fakestoreapi.com) as an API.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+It also uses Typescript and [Material UI](https://mui.com) for UI Components like Cards, Buttons, etc.
 ## Available Scripts
 
 In the project directory, you can run:

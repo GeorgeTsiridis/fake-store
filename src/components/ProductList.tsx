@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { Grid, CircularProgress, Button } from "@material-ui/core";
+import { Button, CircularProgress, Grid } from "@material-ui/core";
 import ProductCard from "./ProductCard";
 import { Product } from "../model/Product";
 import useStyles from "../assets/styles";
-import { FilterAltOff } from "@mui/icons-material";
 import { ProductService } from "../services/ProductService";
+import { FilterAltOff } from "@mui/icons-material";
 
 type ProductListProps = {
   showOnlyFavorites: boolean;
@@ -26,12 +26,16 @@ function ProductList({ showOnlyFavorites }: ProductListProps) {
     });
   }, []);
 
+  // loader that spins initially and sets to false when the API gives a response
   if (loading) {
     return <CircularProgress />;
   }
 
   /**
    * Used to add the id of the product to localStorage for filtering the list
+   * when the item is getting removed from the array, we are getting a copy of the 
+   * array without the certain product and set it to localStorage. Otherwise for adding,
+   * we are using the spred operator to get the current favorites and add the productId on them
    * @param product the product to add or remove from favorites
    */
   const handleFavoriteClick = (product: Product) => {
@@ -71,7 +75,7 @@ function ProductList({ showOnlyFavorites }: ProductListProps) {
 
   // Rendering the List
   // If the user selects the sorting functionality we are displaying the sorted products
-  // and also adding a clear sorting filter button to reset the view
+  // and also adding a clear sorting filter button to reset the view without sorting
   return (
     <><div className={classes.filterButtonsDiv}>
       <Button variant="contained" onClick={handleSort} className={classes.filterButton}>

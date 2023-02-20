@@ -13,13 +13,6 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: '100%',
         margin: '5px'
     },
-    productDescription: {
-        height: '15vh',
-        overflowY: 'auto',
-        overflowX: 'hidden',
-        whiteSpace: 'break-spaces',
-        padding: '0em 0em 0.5em 0em'
-    },
     productTitle: {
         height: '160px'
     },
