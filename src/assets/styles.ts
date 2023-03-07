@@ -1,7 +1,7 @@
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 // custom shared styles used in different components
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
     // style used to make only the list scrollable with the top bar being fixed
     root: {
         flexGrow: 1,

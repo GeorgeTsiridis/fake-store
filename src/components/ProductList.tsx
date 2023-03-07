@@ -40,7 +40,7 @@ function ProductList({ showOnlyFavorites }: ProductListProps) {
    */
   const handleFavoriteClick = (product: Product) => {
     const favorites = favoriteIds.includes(product.id.toString())
-      ? favoriteIds.filter((id) => id !== product.id.toString())
+      ? favoriteIds.filter(id => id !== product.id.toString())
       : [...favoriteIds, product.id.toString()];
     setFavoriteIds(favorites);
     localStorage.setItem("favorites", JSON.stringify(favorites));
@@ -51,7 +51,7 @@ function ProductList({ showOnlyFavorites }: ProductListProps) {
    * otherwise we are showing all the products from the API
    */
   const displayedProducts = showOnlyFavorites
-    ? products.filter((product) => favoriteIds.includes(product.id.toString()))
+    ? products.filter(product => favoriteIds.includes(product.id.toString()))
     : products;
 
   const handleSort = () => {
@@ -86,7 +86,7 @@ function ProductList({ showOnlyFavorites }: ProductListProps) {
       </Button>}
     </div>
       <Grid container spacing={3} justifyContent="center" className={classes.grid}>
-        {(sortOrder !== undefined ? sortedProducts : displayedProducts).map((product) => (
+        {(sortOrder !== undefined ? sortedProducts : displayedProducts).map(product => (
           <ProductCard
             data-testid="product-card"
             key={product.id}
